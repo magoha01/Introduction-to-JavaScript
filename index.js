@@ -178,7 +178,7 @@ function game(user, computer){
   if(user === "rock" && computer === "scissors"){
     return "you win!";
   } else if(user === "rock" && computer === "paper"){
-    return "you lost!";
+    return "you lose!";
     } else if(user === "paper" && computer === "rock"){
       return "you win!";
     }else if(user === "paper" && computer === "scissors"){
@@ -239,7 +239,7 @@ Using the annoyingSong function below do the following:
 
 function annoyingSong(){
 
-  for (let i = 99; i > -1; i -- ) {
+  for (let i = 5; i > -1; i -- ) {
     return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${(i - 1)} bottles of soda on the wall`
 }
 }
@@ -296,6 +296,26 @@ function vowelCounter(str, vowels,) {
   
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
