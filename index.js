@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
@@ -19,8 +20,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 18;
+if(votingAge === 18){
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -32,10 +35,13 @@ Do the following:
 
    HINT: no function required
 */
+let var1 = 1;
+let var2 = 2;
 
-
-
-
+if(var2 > var1) {
+  var1 *= 100;
+ }
+ console.log(var1)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -47,7 +53,10 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+const x = '1999';
+if (typeof x === 'string'){
+  console.log(Number(x));
+}
 
 
 
@@ -60,26 +69,27 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b
 }
+console.log(multiply(3,4));
 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
-//Age in Dog years
-/*
-Do the following:
- 1. Invoke the dogYears function below and pass an age value to it
- 2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
- 3. Return the newly calculated age
-*/
+// //Age in Dog years
+// /*
+// Do the following:
+//  1. Invoke the dogYears function below and pass an age value to it
+//  2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
+//  3. Return the newly calculated age
+// */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(myAge){
+    return myAge * 7;
 }
-
+console.log(dogYears(29));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -109,9 +119,18 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+// function hungryDog(weight, age){
+//   /*add your code here*/
+//   if(age>=1 && weight <= 5){
+//     return weight * 0.05;
+//   } else if (age >= 1 && weight <= 10){
+//     return weight * 0.04;
+//   } else if (age >= 1 && weight <= 15){
+//     return weight * 0.03;
+//   } else if (age >= 1 && weight > 15) {
+//     return weight * 0.02;
+//   } 
+// }
 
 
 
@@ -136,9 +155,9 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
+// function game(user, computer){
+//   /*add your code here*/
+// }
 
 
 
@@ -149,13 +168,13 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
-}
+// function miles(/*add your code here*/){
+//   /*add your code here*/
+// }
 
 
 
@@ -183,9 +202,9 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+// function annoyingSong(/*add your code here*/){
+//       /*add your code here*/
+// }
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -222,27 +241,27 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
-}
+// function vowelCounter(/*add your code here*/) {
+//   /*add your code here*/
+// }
 
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
-  console.log('its working');
-  return 'bar';
-}
-foo();
+// function foo(){
+//   console.log('its working');
+//   return 'bar';
+// }
+// foo();
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-module.exports = {
-  foo,
-  multiply,
-  dogYears,
-  hungryDog,
-  game,
-  miles,
-  feet,
-  annoyingSong,
-  grade
-}
+// module.exports = {
+//   foo,
+//   multiply,
+//   dogYears,
+//   hungryDog,
+//   game,
+//   miles,
+//   feet,
+//   annoyingSong,
+//   grade
+// }
