@@ -69,9 +69,9 @@ Do the following:
 */
 
 function multiply(a, b){
-  return (a * b)
+  return (a * b);
 }
-console.log('Task 1d', multiply(1,2));
+console.log('Task 1d', multiply(3,4));
 
 
 
@@ -89,6 +89,8 @@ function dogYears(myAge){
     return myAge * 7;
 }
 console.log('task 2', dogYears(29));
+
+dogYears();
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -128,7 +130,7 @@ function hungryDog(weight, age){
     return weight * 0.03;
   } else if (age >= 1 && weight > 15) {
     return weight * 0.02;
-  } else if(age<.333){
+  } else if(age < .333){
     return weight * .1;
   } else if (age < 1 && age >= 0.583){
     return weight * 0.04;
@@ -162,9 +164,38 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-// function game(user, computer){
-//   /*add your code here*/
-// }
+let computer = Math.floor(Math.random()*3);
+if (computer === 0){
+  computer = 'rock';
+} else if (computer === 1){
+  computer = 'paper';
+} else if(computer === 2){
+  computer = 'scissors';
+} 
+
+let user = 'paper';
+
+function game(user, computer){
+  if(user === 'rock' && computer === 'scissors'){
+    return "you win!";
+  } else if(user === 'rock' && computer === 'paper'){
+    return "you lost!";
+    } else if(user === 'paper' && computer === 'rock'){
+      return "you win!";
+    }else if(user === 'paper' && computer === 'scissors'){
+      return "you lose!";
+  } else if(user === 'scissors' && computer === 'paper'){
+    return "you win!";
+  } else if(user === 'scissors' && computer === 'rock'){
+    return "you lose!";
+  } else if (user === computer){
+    return "it's a tie";
+  }
+}
+
+console.log(game(user,computer))
+
+
 
 
 
