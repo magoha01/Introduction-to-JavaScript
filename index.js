@@ -225,7 +225,7 @@ function feet(cm){
   return cm / 30.48;
 }
 
-console.log(feet(40));
+console.log('task 5b', feet(40));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -237,10 +237,13 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
-}
+function annoyingSong(){
 
+  for (let i = 99; i > -1; i -- ) {
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${(i - 1)} bottles of soda on the wall`
+}
+}
+console.log('task 6', annoyingSong());
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -257,10 +260,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(myGrade){
+if(myGrade >= 90){
+  return 'you got an A'
+  } else if(myGrade <= 89 && myGrade >= 80){
+  return 'you got a B'
+  } else if(myGrade <= 79 && myGrade >= 70) {
+  return 'you got a C'
+  } else if (myGrade <= 69 && myGrade >= 60){
+  return 'you got a D'
+  } else if (myGrade < 60){
+  return 'you got an F'
+  }
 }
 
+console.log('Task 7', grade(75));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
@@ -276,11 +290,12 @@ HINT - try looking up the .includes() method
 */
 
 
-// function vowelCounter(/*add your code here*/) {
-//   /*add your code here*/
-// }
+function vowelCounter(str, vowels,) {
+  vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' ];
 
+  
 
+}
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){
@@ -299,4 +314,5 @@ module.exports = {
   feet,
   annoyingSong,
   grade
+
 }
