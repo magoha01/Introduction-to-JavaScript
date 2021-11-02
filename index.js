@@ -42,7 +42,7 @@ let var2 = 2;
 if(var2 > var1) {
   var1 *= 100;
  }
- console.log(var1)
+
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -55,7 +55,7 @@ Do the following:
    HINT: look up the Number method
 */
 const x = '1999';
-console.log(Number(x));
+// console.log(Number(x));
 
 
 
@@ -67,6 +67,7 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
+
 
 function multiply(a, b){
   return (a * b);
@@ -85,12 +86,10 @@ console.log('Task 1d', multiply(3,4));
 //  3. Return the newly calculated age
 // */
 
-function dogYears(myAge){
-    return myAge * 7;
+function dogYears(humanYears){
+    return humanYears * 7;
 }
 console.log('task 2', dogYears(29));
-
-dogYears();
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -166,37 +165,34 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 
 let computer = Math.floor(Math.random()*3);
 if (computer === 0){
-  computer = 'rock';
+  computer = "rock";
 } else if (computer === 1){
-  computer = 'paper';
+  computer = "paper";
 } else if(computer === 2){
-  computer = 'scissors';
+  computer = "scissors";
 } 
 
-let user = 'paper';
+let user = "paper";
 
 function game(user, computer){
-  if(user === 'rock' && computer === 'scissors'){
+  if(user === "rock" && computer === "scissors"){
     return "you win!";
-  } else if(user === 'rock' && computer === 'paper'){
+  } else if(user === "rock" && computer === "paper"){
     return "you lost!";
-    } else if(user === 'paper' && computer === 'rock'){
+    } else if(user === "paper" && computer === "rock"){
       return "you win!";
-    }else if(user === 'paper' && computer === 'scissors'){
+    }else if(user === "paper" && computer === "scissors"){
       return "you lose!";
-  } else if(user === 'scissors' && computer === 'paper'){
+  } else if(user === "scissors" && computer === "paper"){
     return "you win!";
-  } else if(user === 'scissors' && computer === 'rock'){
+  } else if(user === "scissors" && computer === "rock"){
     return "you lose!";
   } else if (user === computer){
     return "it's a tie";
   }
 }
 
-console.log(game(user,computer))
-
-
-
+console.log('task 4', game(user,computer))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -210,10 +206,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-// function miles(/*add your code here*/){
-//   /*add your code here*/
-// }
+function miles(kilometers){
+  return kilometers * 0.621371;
+}
 
+console.log('task 5a', miles(5));
 
 
 //Task 5b - Feet to CM
@@ -224,11 +221,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
-
+console.log(feet(40));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -240,9 +237,9 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-// function annoyingSong(/*add your code here*/){
-//       /*add your code here*/
-// }
+function annoyingSong(/*add your code here*/){
+      /*add your code here*/
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -286,20 +283,20 @@ HINT - try looking up the .includes() method
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-// function foo(){
-//   console.log('its working');
-//   return 'bar';
-// }
-// foo();
+function foo(){
+  console.log('its working');
+  return 'bar';
+}
+foo();
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-// module.exports = {
-//   foo,
-//   multiply,
-//   dogYears,
-//   hungryDog,
-//   game,
-//   miles,
-//   feet,
-//   annoyingSong,
-//   grade
-// }
+module.exports = {
+  foo,
+  multiply,
+  dogYears,
+  hungryDog,
+  game,
+  miles,
+  feet,
+  annoyingSong,
+  grade
+}
